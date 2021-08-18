@@ -1,0 +1,26 @@
+Instructions to Install Game
+1. Download and open chess.zip
+2. Navigate to the Chess file directory in Terminal
+3. Enter the command below
+  $ make build
+4. Enter the command below to start the game
+  $ make play
+
+Instructions for play
+This game plays just like the normal game of two player classical Chess 
+without the threefold repetition and the fifty-move rule. Each turn white is 
+prompted to move first and then black. To end the game type the command:
+
+Instructions for moving a piece
+1. Enter a starting square that has a piece with the format <letter><number>
+2. Enter the word " to "
+3. Enter a ending square with the format <letter><number>
+4. Press Enter to make the move
+
+Examples of Moves: 
+> a2 to a4
+> g1 to f3
+> c7 to c5
+
+To end the game type the command
+  $ quit

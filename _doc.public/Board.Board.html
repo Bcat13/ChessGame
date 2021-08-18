@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="Up" href="Board.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Piece" rel="Chapter" href="Piece.html">
+<link title="Square" rel="Chapter" href="Square.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Setup" rel="Chapter" href="Setup.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="Engine" rel="Chapter" href="Engine.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Author" rel="Chapter" href="Author.html"><title>Board.Board</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Board.html" title="Board">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Board.Board.html">Board.Board</a></h1>
+
+<pre><span id="MODULEBoard"><span class="keyword">module</span> Board</span>: <code class="code">sig</code> <a href="Board.Board.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><code><span id="TYPEb"><span class="keyword">type</span> <code class="type"></code>b</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTb.tiles">tiles</span>&nbsp;: <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTb.piece_list">piece_list</span>&nbsp;: <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> list</code>;</code></td>
+
+</tr></table>
+<code>}</code>
+
+
+
+<pre><span id="EXCEPTIONInvalidMove"><span class="keyword">exception</span> InvalidMove</span></pre>
+
+<pre><span id="EXCEPTIONInvalidSquare"><span class="keyword">exception</span> InvalidSquare</span></pre>
+
+<pre><span id="EXCEPTIONEmptySquare"><span class="keyword">exception</span> EmptySquare</span></pre>
+
+<pre><span id="VALget_piece"><span class="keyword">val</span> get_piece</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> option -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a></code></pre>
+<pre><span id="VALcopy_tiles"><span class="keyword">val</span> copy_tiles</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array</code></pre>
+<pre><span id="VALtiles_flatten"><span class="keyword">val</span> tiles_flatten</span> : <code class="type">'a array array -> 'a array</code></pre>
+<pre><span id="VALcopy_piece_list"><span class="keyword">val</span> copy_piece_list</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> list</code></pre>
+<pre><span id="VALcopy_board"><span class="keyword">val</span> copy_board</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Board.Board.html#TYPEb">b</a></code></pre>
+<pre><span id="VALget_arr_index"><span class="keyword">val</span> get_arr_index</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> int array</code></pre>
+<pre><span id="VALloc_to_arr_index"><span class="keyword">val</span> loc_to_arr_index</span> : <code class="type"><a href="Piece.Piece.html#TYPEl">Piece.Piece.l</a> -> int array</code></pre>
+<pre><span id="VALget_file_rank"><span class="keyword">val</span> get_file_rank</span> : <code class="type">int array -> char * int</code></pre>
+<pre><span id="VALis_valid_move"><span class="keyword">val</span> is_valid_move</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALsquare_in_tiles"><span class="keyword">val</span> square_in_tiles</span> : <code class="type">'a -> 'a array array -> bool</code></pre>
+<pre><span id="VALupdatepieceList"><span class="keyword">val</span> updatepieceList</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool -> unit</code></pre>
+<pre><span id="VALreverse_update_piece_list"><span class="keyword">val</span> reverse_update_piece_list</span> : <code class="type"><a href="Piece.Piece.html#TYPEl">Piece.Piece.l</a> -><br>       <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> list -> <a href="Board.Board.html#TYPEb">b</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> unit</code></pre>
+<pre><span id="VALreverse_update_tiles"><span class="keyword">val</span> reverse_update_tiles</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -><br>       <a href="Square.Square.html#TYPEo">Square.Square.o</a> -><br>       <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool -> unit</code></pre>
+<pre><span id="VALupdate_tiles"><span class="keyword">val</span> update_tiles</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool -> unit</code></pre>
+<pre><span id="VALin_bounds"><span class="keyword">val</span> in_bounds</span> : <code class="type">int -> int -> bool</code></pre>
+<pre><span id="VALget_square"><span class="keyword">val</span> get_square</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> string -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a></code></pre>
+<pre><span id="VALic_by_line"><span class="keyword">val</span> ic_by_line</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array -><br>       int -> int -> int -> int -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> <a href="Piece.Piece.html#TYPEk">Piece.Piece.k</a> -> bool</code></pre>
+<pre><span id="VALic_by_pawn2"><span class="keyword">val</span> ic_by_pawn2</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array -><br>       int -> int -> int -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALic_by_knight"><span class="keyword">val</span> ic_by_knight</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array -><br>       int -> int -> int -> int -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALic_by_king"><span class="keyword">val</span> ic_by_king</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> array array -><br>       int -> int -> int -> int -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALin_check"><span class="keyword">val</span> in_check</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALpaths_for_pawn"><span class="keyword">val</span> paths_for_pawn</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> int -> int -> bool -> (char * int) list</code></pre>
+<pre><span id="VALpawn_next_moves"><span class="keyword">val</span> pawn_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> (char * int) list</code></pre>
+<pre><span id="VALnext_incr"><span class="keyword">val</span> next_incr</span> : <code class="type">int -> int</code></pre>
+<pre><span id="VALpath_for_piece"><span class="keyword">val</span> path_for_piece</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> int -> int -> (char * int) list</code></pre>
+<pre><span id="VALrook_next_moves"><span class="keyword">val</span> rook_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> (char * int) list</code></pre>
+<pre><span id="VALbishop_next_moves"><span class="keyword">val</span> bishop_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> (char * int) list</code></pre>
+<pre><span id="VALqueen_next_moves"><span class="keyword">val</span> queen_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> (char * int) list</code></pre>
+<pre><span id="VALsquare_for_piece"><span class="keyword">val</span> square_for_piece</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> int -> int -> (char * int) list</code></pre>
+<pre><span id="VALknight_next_moves"><span class="keyword">val</span> knight_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> (char * int) list</code></pre>
+<pre><span id="VALking_next_moves"><span class="keyword">val</span> king_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> (char * int) list</code></pre>
+<pre><span id="VALdnr_in_check"><span class="keyword">val</span> dnr_in_check</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> <a href="Piece.Piece.html#TYPEl">Piece.Piece.l</a> -> bool</code></pre>
+<pre><span id="VALdnr_in_check_ep"><span class="keyword">val</span> dnr_in_check_ep</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> <a href="Piece.Piece.html#TYPEl">Piece.Piece.l</a> -> bool</code></pre>
+<pre><span id="VALhave_moved"><span class="keyword">val</span> have_moved</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> bool -> bool</code></pre>
+<pre><span id="VALempty_castle_rank"><span class="keyword">val</span> empty_castle_rank</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> bool -> bool</code></pre>
+<pre><span id="VALcan_castle"><span class="keyword">val</span> can_castle</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool -> bool</code></pre>
+<pre><span id="VALupdate_next_move"><span class="keyword">val</span> update_next_move</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> unit</code></pre>
+<pre><span id="VALupdate_next_moves"><span class="keyword">val</span> update_next_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> unit</code></pre>
+<pre><span id="VALno_valid_moves"><span class="keyword">val</span> no_valid_moves</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> list -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALinCheckmate"><span class="keyword">val</span> inCheckmate</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALdiff_team_same_sq_color"><span class="keyword">val</span> diff_team_same_sq_color</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> list -> bool</code></pre>
+<pre><span id="VALis_kb_kb_same_color"><span class="keyword">val</span> is_kb_kb_same_color</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> bool</code></pre>
+<pre><span id="VALis_king_knight_vs_king"><span class="keyword">val</span> is_king_knight_vs_king</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> bool</code></pre>
+<pre><span id="VALis_king_bishop_vs_king"><span class="keyword">val</span> is_king_bishop_vs_king</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> bool</code></pre>
+<pre><span id="VALis_king_vs_king"><span class="keyword">val</span> is_king_vs_king</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> bool</code></pre>
+<pre><span id="VALinStalemate"><span class="keyword">val</span> inStalemate</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Piece.Piece.html#TYPEc">Piece.Piece.c</a> -> bool</code></pre>
+<pre><span id="VALupdate_take"><span class="keyword">val</span> update_take</span> : <code class="type"><a href="State.State.html#TYPEstate">State.State.state</a> -> <a href="Square.Square.html#TYPEo">Square.Square.o</a> -> unit</code></pre>
+<pre><span id="VALupdateState"><span class="keyword">val</span> updateState</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Square.Square.html#TYPEo">Square.Square.o</a> -> <a href="State.State.html#TYPEstate">State.State.state</a> -> <a href="State.State.html#TYPEstate">State.State.state</a></code></pre>
+<pre><span id="VALpp_loc"><span class="keyword">val</span> pp_loc</span> : <code class="type"><a href="Piece.Piece.html#TYPEl">Piece.Piece.l</a> -> string</code></pre>
+<pre><span id="VALpp_piece_name"><span class="keyword">val</span> pp_piece_name</span> : <code class="type"><a href="Piece.Piece.html#TYPEk">Piece.Piece.k</a> -> string</code></pre>
+<pre><span id="VALpp_list"><span class="keyword">val</span> pp_list</span> : <code class="type">('a -> string) -> 'a list -> string</code></pre>
+<pre><span id="VALprint_valid_moves"><span class="keyword">val</span> print_valid_moves</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> unit</code></pre>
+<pre><span id="VALprint_all_valid_moves"><span class="keyword">val</span> print_all_valid_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="State.State.html#TYPEstate">State.State.state</a> -> unit</code></pre>
+<pre><span id="VALget_num_moves_piece"><span class="keyword">val</span> get_num_moves_piece</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> int</code></pre>
+<pre><span id="VALget_num_moves"><span class="keyword">val</span> get_num_moves</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="State.State.html#TYPEstate">State.State.state</a> -> int</code></pre>
+<pre><span id="VALpawn_moved_two"><span class="keyword">val</span> pawn_moved_two</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool</code></pre>
+<pre><span id="VALgive_ep"><span class="keyword">val</span> give_ep</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="State.State.html#TYPEstate">State.State.state</a> -> unit</code></pre>
+<pre><span id="VALis_diagonal"><span class="keyword">val</span> is_diagonal</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool</code></pre>
+<pre><span id="VALis_en_passant"><span class="keyword">val</span> is_en_passant</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool</code></pre>
+<pre><span id="VALis_promotion"><span class="keyword">val</span> is_promotion</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool</code></pre>
+<pre><span id="VALupdate_take_promote"><span class="keyword">val</span> update_take_promote</span> : <code class="type"><a href="State.State.html#TYPEstate">State.State.state</a> -> <a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> -> unit</code></pre>
+<pre><span id="VALpromote_pawn"><span class="keyword">val</span> promote_pawn</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="State.State.html#TYPEstate">State.State.state</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool -> unit</code></pre>
+<pre><span id="VALgame_helper"><span class="keyword">val</span> game_helper</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">Piece.Piece.piece</a> list -> int -> int</code></pre>
+<pre><span id="VALget_game_score"><span class="keyword">val</span> get_game_score</span> : <code class="type"><a href="State.State.html#TYPEstate">State.State.state</a> -> <a href="Board.Board.html#TYPEb">b</a> -> int</code></pre>
+<pre><span id="VALis_castle"><span class="keyword">val</span> is_castle</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool</code></pre>
+<pre><span id="VALis_king"><span class="keyword">val</span> is_king</span> : <code class="type"><a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> bool</code></pre>
+<pre><span id="VALmove"><span class="keyword">val</span> move</span> : <code class="type"><a href="Board.Board.html#TYPEb">b</a> -><br>       <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -><br>       <a href="Square.Square.html#TYPEsquare">Square.Square.square</a> -> <a href="State.State.html#TYPEstate">State.State.state</a> -> bool -> unit</code></pre></body></html>

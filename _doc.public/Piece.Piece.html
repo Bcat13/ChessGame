@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="Up" href="Piece.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Piece" rel="Chapter" href="Piece.html">
+<link title="Square" rel="Chapter" href="Square.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Setup" rel="Chapter" href="Setup.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="Engine" rel="Chapter" href="Engine.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Author" rel="Chapter" href="Author.html"><title>Piece.Piece</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Piece.html" title="Piece">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Piece.Piece.html">Piece.Piece</a></h1>
+
+<pre><span id="MODULEPiece"><span class="keyword">module</span> Piece</span>: <code class="code">sig</code> <a href="Piece.Piece.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><code><span id="TYPEk"><span class="keyword">type</span> <code class="type"></code>k</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTk.Pawn"><span class="constructor">Pawn</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTk.Knight"><span class="constructor">Knight</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTk.Bishop"><span class="constructor">Bishop</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTk.Rook"><span class="constructor">Rook</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTk.Queen"><span class="constructor">Queen</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTk.King"><span class="constructor">King</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><code><span id="TYPEc"><span class="keyword">type</span> <code class="type"></code>c</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTc.White"><span class="constructor">White</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTc.Black"><span class="constructor">Black</span></span></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="TYPEw"><span class="keyword">type</span> <code class="type"></code>w</span> = <code class="type">int</code> </pre>
+
+
+<pre><span id="TYPEl"><span class="keyword">type</span> <code class="type"></code>l</span> = <code class="type">char * int</code> </pre>
+
+
+<pre><span id="TYPEn_m"><span class="keyword">type</span> <code class="type"></code>n_m</span> = <code class="type"><a href="Piece.Piece.html#TYPEl">l</a> list</code> </pre>
+
+
+<pre><code><span id="TYPEpiece"><span class="keyword">type</span> <code class="type"></code>piece</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpiece.name">name</span>&nbsp;: <code class="type"><a href="Piece.Piece.html#TYPEk">k</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpiece.color">color</span>&nbsp;: <code class="type"><a href="Piece.Piece.html#TYPEc">c</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpiece.worth">worth</span>&nbsp;: <code class="type"><a href="Piece.Piece.html#TYPEw">w</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTpiece.location">location</span>&nbsp;: <code class="type"><a href="Piece.Piece.html#TYPEl">l</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTpiece.next_moves">next_moves</span>&nbsp;: <code class="type"><a href="Piece.Piece.html#TYPEn_m">n_m</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span class="keyword">mutable&nbsp;</span><span id="TYPEELTpiece.num_moves">num_moves</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+<code>}</code>
+
+
+
+<pre><span id="VALcopy_piece"><span class="keyword">val</span> copy_piece</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">piece</a> -> <a href="Piece.Piece.html#TYPEpiece">piece</a></code></pre>
+<pre><span id="VALpp_print_loc"><span class="keyword">val</span> pp_print_loc</span> : <code class="type">char * int -> unit</code></pre>
+<pre><span id="VALpp_type"><span class="keyword">val</span> pp_type</span> : <code class="type"><a href="Piece.Piece.html#TYPEk">k</a> -> unit</code></pre>
+<pre><span id="VALpp_piece"><span class="keyword">val</span> pp_piece</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">piece</a> -> unit</code></pre>
+<pre><span id="VALpp_pl"><span class="keyword">val</span> pp_pl</span> : <code class="type"><a href="Piece.Piece.html#TYPEpiece">piece</a> list -> unit</code></pre></body></html>

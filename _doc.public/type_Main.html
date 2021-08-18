@@ -1,0 +1,49 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Piece" rel="Chapter" href="Piece.html">
+<link title="Square" rel="Chapter" href="Square.html">
+<link title="State" rel="Chapter" href="State.html">
+<link title="Board" rel="Chapter" href="Board.html">
+<link title="Setup" rel="Chapter" href="Setup.html">
+<link title="Command" rel="Chapter" href="Command.html">
+<link title="Engine" rel="Chapter" href="Engine.html">
+<link title="Main" rel="Chapter" href="Main.html">
+<link title="Author" rel="Chapter" href="Author.html"><title>Main</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pieces_taken&nbsp;:&nbsp;<span class="constructor">Command</span>.player_color&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pp_piece&nbsp;:&nbsp;<span class="constructor">Piece</span>.<span class="constructor">Piece</span>.piece&nbsp;option&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pp_row&nbsp;:&nbsp;<span class="constructor">Square</span>.<span class="constructor">Square</span>.square&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pp_row_flipped&nbsp;:&nbsp;<span class="constructor">Square</span>.<span class="constructor">Square</span>.square&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pp_board_flipped&nbsp;:&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;pp_board&nbsp;:&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;game_over_printer&nbsp;:&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;in_check_printer&nbsp;:&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;engine_move_random&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;engine_move_minimax&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;player_move&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;(bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;two_player_game&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;one_player_game&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;one_player_game_black&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;engine_vs_engine&nbsp;:&nbsp;bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Board</span>.<span class="constructor">Board</span>.b&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">State</span>.<span class="constructor">State</span>.state&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;initialize_game&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;main&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+<span class="keyword">end</span></code></body></html>
